@@ -1,35 +1,56 @@
 @import './base.css';
+@import './inputs.css';
 
 #app {
-  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  background-color: var(--color-background);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+.header{
+  display: flex;
+  
+  .header__logo{
+    width: 200px;
+    max-width: 50vw;
+    height: fit-content;
+    flex-shrink: 0;
+  }
+  .header__data{
+    width: 100%;
+    align-self: flex-end;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+.main{
+  margin: auto 0;
+  text-align: center;
+  .main__result{
+    font-weight: 600;
+    font-size: 28vw;
+    @media screen and (min-width: 600px) {
+      font-size: 168px;
+    }
   }
+  .main__subtext{
+    font-weight: 500;
+    font-size: 5vw;
+    @media screen and (min-width: 600px) {
+      font-size: 30px;
+    }
+  }
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+.footer{
+  margin-top: auto;
+  padding: 0.5rem;
+  background-color: var(--color-footer);
+  .footer__text{
+    text-align: center;
+    font-weight: 500;
   }
 }
