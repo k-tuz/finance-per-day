@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100vh;
+  max-height: -webkit-fill-available;
   max-width: 600px;
   margin: 0 auto;
   background-color: var(--color-background);
@@ -14,6 +14,7 @@
 
 .header{
   display: flex;
+  flex-shrink: 0;
   
   .header__logo{
     width: 200px;
@@ -28,8 +29,12 @@
 }
 
 .main{
+  height: 100%;
   margin: auto 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .main__result{
     font-weight: 600;
     font-size: 28vw;
@@ -47,6 +52,7 @@
 }
 
 .footer{
+  flex-shrink: 0;
   margin-top: auto;
   padding: 0.5rem;
   background-color: var(--color-footer);
